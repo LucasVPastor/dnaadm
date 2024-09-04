@@ -10,7 +10,7 @@ header {
     align-items: center;
 }
 main {
-    height: 100vh; /* Ajustado para viewport height */
+    height: auto; /* Ajustado para viewport height */
 }
 .header1 {
     display: flex;
@@ -77,6 +77,10 @@ main {
     text-decoration: inherit;
 }
 
+.fase1{
+    height: auto;
+}
+
 .h1chamada {
     font-family: "Bree Serif", serif;
     font-weight: 400;
@@ -85,7 +89,14 @@ main {
     margin: 0;
     color: black;
 }
-
+.h1chamada-branco{
+    font-family: "Bree Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5rem;
+    margin: 0;
+    color: rgb(255, 255, 255);
+}
 .pchamada {
     font-family: "Bree Serif", serif;
     font-weight: 400;
@@ -94,6 +105,8 @@ main {
     margin: 0;
     text-align: center;
     color: black;
+
+    max-width: 36dvw;
 }
 
 .dnaadm {
@@ -101,7 +114,7 @@ main {
     font-family: "Bree Serif", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 5rem;
+    font-size: 4em;
     margin: 0;
     background: -webkit-linear-gradient(#3AC5AB, #1A7AF5);
     -webkit-background-clip: text;
@@ -125,8 +138,7 @@ main {
 
 .day, .month {
     font-size: 8rem; 
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;}
+}
 
 .separator {
     writing-mode: vertical-rl;
@@ -147,13 +159,13 @@ main {
 
 @keyframes float {
     0% {
-        transform: translatey(0px);
+        transform: translatey(-70px);
     }
     50% {
-        transform: translatey(30px);
+        transform: translatey(-4px);
     }
     100% {
-        transform: translatey(0px);
+        transform: translatey(-70px);
     }
 }
 
@@ -163,11 +175,71 @@ main {
     animation: float 2s ease-in-out infinite;
 }
 
-.fase2{
-    background-color: #122239;
-    height: 100dvh;
+.imgRetangulo{
+    max-width: 90dvw;
+    top: 10dvh;
 }
 
+.fase2{
+    background-color: #122239;
+    height: auto;
+}
+.fase2H1{
+    margin-top: 2dvh;
+    position: absolute;
+    font-size: 7rem !important;
+}
+.fase2H1s{
+    margin-top: 1.7dvh;
+     margin-right: 0.5dvw;
+    position: absolute;
+    font-size: 7rem !important;
+    background: -webkit-linear-gradient(90deg, rgb(0, 195, 255) 34%, rgb(0, 158, 158) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.conteudo-fase2{
+    padding-top: 50dvh;
+    display: flex;
+    justify-content: center;
+    width: 100dvw;
+}
+.fase2Sobre{
+    text-align: center;
+    font-family: "Bree Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5rem;
+    margin: 0;
+    color: #ffffff;
+    max-width: 80dvw;
+    padding-bottom: 300px;
+
+}
+.fase3{
+    font-size: 7rem !important;
+    display: flex;
+    justify-content: center;
+    margin: none;
+    padding: none;
+}
+.fase3H1{
+    margin-top: 14dvh;
+    position: absolute;
+    font-size: 7rem !important;
+}
+.fase3H1s{
+    margin-top: 14.7dvh;
+    margin-right: 0.5dvw;
+    position: absolute;
+    font-size: 7rem !important;
+    background: -webkit-linear-gradient(90deg, rgb(0, 195, 255) 34%, rgb(0, 158, 158) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.imgPoligono{
+        max-width: 78dvw;
+}
 /* Media Queries para diferentes tamanhos de tela */
 @media (max-width: 1200px) {
     .header1 h1, .dnaadm {
@@ -175,6 +247,38 @@ main {
     }
     .divDias{
         flex-direction: column;
+    }
+    .fase1{
+        height: 74dvh;
+    }
+    .pchamada {
+        max-width: 88dvw;
+    }
+    .fase2H1{
+        font-size: 7.4dvw !important;
+    }
+    .imgRetangulo{
+        top: 79dvh;
+        position: absolute;
+        width: 97dvw !important;
+        max-width: none !important;
+    }
+    .conteudo-fase2{
+        padding-top: 25dvh;
+    }
+    .fase2Sobre{
+        font-size: 1.5rem;
+    }
+    @keyframes float {
+        0% {
+            transform: translatey(0px);
+        }
+        50% {
+            transform: translatey(20px);
+        }
+        100% {
+            transform: translatey(0px);
+        }
     }
 }
 
